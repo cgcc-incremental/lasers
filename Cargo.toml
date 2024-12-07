@@ -4,7 +4,12 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-slint = "1.8.0"
+slint = { version = "1.8.0", default-features = false, features = [
+  # default features minus backend-qt
+  "compat-1-2", "std", "accessibility", "renderer-femtovg", "renderer-software",
+  # use winit instead of qt
+  "backend-winit",
+] }
 
 [build-dependencies]
 slint-build = "1.8.0"

@@ -23,6 +23,7 @@ target/
 # Nix/direnv
 .direnv
 /.pre-commit-config.yaml
+/result
 
 # Added by cargo
 /target

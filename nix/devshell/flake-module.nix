@@ -18,9 +18,7 @@
           # "${inputs.devshell}/extra/language/rust.nix"
         ];
 
-        commands = with pkgs; [
-          # { package = rust-toolchain; category = "rust"; }
-        ];
+	#packages = with pkgs; [ cargo ];
 
         language.c = {
           libraries = lib.optional pkgs.stdenv.isDarwin pkgs.libiconv;
